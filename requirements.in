@@ -1,0 +1,2 @@
+# DLC runtime dependencies are intentionally empty during architecture-first seeding.
+# Add dependencies only after DLC-0 review / DLC-1 contract implementation requires them.
