@@ -21,7 +21,9 @@ Read, in order:
 7. `docs/OWNERSHIP_BOUNDARIES.md`
 8. `docs/INTEGRATION_CONTRACTS.md`
 9. `docs/EDGESTACK_PARLAY_OPTIMIZER_V1.md`
-10. relevant change/validation records.
+10. `docs/PREGAME_SIGNAL_HEALTH_INTEGRATION_V1.md`
+11. `docs/POST_GAME_FEEDBACK_LOOP_V1.md`
+12. relevant change/validation records.
 
 ## 3. Non-negotiable ownership boundaries
 
@@ -139,7 +141,19 @@ Major capability architecture and contracts are reviewed before implementation.
 
 DLC recommendation/publication behavior must be validated manually and historically before it becomes production-authoritative or automated through TDLA/Bridge workflows.
 
-## 12. Change documentation
+## 12. Pregame signal-health boundary
+
+Sport-owned signal-health/regime detection may be carried into DLC only through versioned sealed sport contracts. DLC may expose certified uncertainty/regime metadata and use it in product ranking where policy is validated, but it may not reconstruct sport state, apply sport-specific percentage-point penalties, or override sport fair probabilities/Recommendation Gates.
+
+## 13. Post-game feedback / no self-modification
+
+Post-game results may generate immutable evaluation records, calibration evidence, miss-attribution findings, feature-watch signals, and research proposals.
+
+A single game or EdgeStack result must never directly alter production sport-model weights, sport features, Recommendation Gate thresholds, DLC ranking weights, or provider policies.
+
+Any proposed improvement must pass the owning repository's PIT backtest/champion-challenger/promotion process. DLC may aggregate and route evidence; it does not silently self-train from realized outcomes.
+
+## 14. Change documentation
 
 Every material change must leave durable human-readable memory.
 
@@ -152,7 +166,7 @@ Required locations:
 
 A material record should capture timestamp, summary, reason, affected files/contracts, authority impact, validation evidence, risks/open questions, rollback/recovery where relevant, and next exact step.
 
-## 13. Bridge rule
+## 15. Bridge rule
 
 The GrokBot-OpenAI-Bridge currently uses one repository per Codex turn. Preserve that boundary when DLC is eventually registered.
 
@@ -160,10 +174,10 @@ Cross-repository work must be split into explicit repository-specific turns with
 
 DLC is **not yet authorized** for Bridge execution merely because the repository now exists. Bridge registration follows successful TDLA proving-ground acceptance and explicit owner authorization.
 
-## 14. Quality direction
+## 16. Quality direction
 
 Initial implementation baseline is expected to use Python 3.12 with pytest, Ruff, strict mypy, deterministic contracts, immutable fixtures/artifacts, and reproducible dependencies. Exact runtime/package policy is finalized during DLC-0 review before implementation authority.
 
-## 15. Definition of done
+## 17. Definition of done
 
 A material DLC change is not done until applicable architecture/contracts, tests/validation, provenance, change journal, certification status, and current resume point all agree.
