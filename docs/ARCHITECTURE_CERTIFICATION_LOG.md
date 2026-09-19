@@ -26,7 +26,7 @@ This file is the authoritative milestone/status record for DLC architecture and 
 | DLC-8 | EdgeStack optimizer/classes | Planned | Requires DLC-5/6/7. |
 | DLC-9 | DailyLinePublicationPackage sealing | Planned | Requires prior product contracts. |
 | DLC-10 | Downstream consumer contracts | Planned | Cross-repository work split by repository. |
-| DLC-11 | PIT historical evaluation/certification | Planned | Promotion thresholds must be locked before authority. |
+| DLC-11 | Post-game feedback, PIT evaluation and certification | Planned | Governing feedback architecture documented; single-game findings cannot directly mutate production. |
 | DLC-12 | Bridge + operational onboarding | Planned | Requires TDLA Bridge proving-ground acceptance + owner authorization. |
 
 ## Current authority statement
@@ -43,6 +43,8 @@ The architecture files are design authority only after DLC-0 review/certificatio
 - DLC owns cross-sport All Bets assembly, EdgeStack 2–5 leg optimization, cross-sport product ranking and sealed publication package assembly.
 - Downstream report/infographic/website/TDLA consumers render sealed truth and do not recompute it.
 - Bankroll/stake management and automated wagering are outside V1.
+- Pregame signal-health detection remains sport-owned; DLC consumes only versioned publication-safe summaries and cannot recalculate sport fair probability.
+- Post-game feedback may generate research proposals but not production self-modification.
 
 ## Next certification action
 
