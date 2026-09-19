@@ -7,7 +7,7 @@ Authority: this file is the single exact continuation point for unfinished DLC w
 
 - `OneVillage83/Daily-Line-Core` now exists and is the canonical repository for DLC architecture.
 - Initial architecture was staged first in `OneVillage83/Daily-Data-Core/docs/daily_line_core/` and extracted here on 2026-09-17.
-- DLC mission/ownership, All Bets, EdgeStack and publication-package architecture are documented.
+- DLC mission/ownership, All Bets, EdgeStack, publication-package, pregame signal-health consumption, and post-game feedback architecture are documented.
 - **DLC-0 is DOCUMENTED — REVIEW PENDING.**
 - No production implementation is authoritative.
 - No live Kalshi/provider Combo integration is authorized.
@@ -31,6 +31,8 @@ Authority: this file is the single exact continuation point for unfinished DLC w
 13. Downstream consumers render/transform sealed truth; they do not recompute probabilities, gates or EdgeStacks.
 14. Product tagline: **“Stack the Edge. Not the Odds.”**
 15. Bankroll management, stake sizing, stop-loss/chase controls and automated wagering are explicitly deferred from V1.
+16. Sport repositories may publish optional PIT-bound signal-health/regime summaries; DLC may expose/use certified uncertainty metadata but may not recalculate sport state or fair probability.
+17. DLC owns cross-sport/product post-game evaluation and feedback aggregation; single-game outcomes cannot directly mutate sport models or gates.
 
 ## Exact next step
 
@@ -39,6 +41,13 @@ Do **not** jump directly to EdgeStack implementation, Kalshi RFQ calls, live pro
 Resume at:
 
 > **DLC-0 architecture/ownership conformance review.** Review the seeded architecture against current `Daily-Data-Core`, `Daily-Model-Core`, Daily-MLB, Daily-NFL, Daily-NCAAF, website and TDLA boundaries. Correct contradictions through versioned documentation. If clean, mark DLC-0 `ARCHITECTURE-CERTIFIED` and proceed to DLC-1 canonical contracts/fixtures.
+
+## Supplemental architecture now included
+
+- `docs/PREGAME_SIGNAL_HEALTH_INTEGRATION_V1.md` — DLC consumption boundary for sport-owned current-state/regime summaries.
+- `docs/POST_GAME_FEEDBACK_LOOP_V1.md` — immutable outcome audit, miss attribution, PIT counterfactual and research-handoff loop.
+
+These do not change the exact next step below or authorize implementation.
 
 ## DLC-1 after certification
 
