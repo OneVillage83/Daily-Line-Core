@@ -311,22 +311,37 @@ Examples:
 - EdgeStack failure -> All Bets/singles may still publish;
 - downstream renderer failure -> sealed DLC package remains valid and can be retried by the consumer.
 
-## 12. Historical evaluation
+## 12. Post-game evaluation and feedback loop
 
-DLC must retain/reference enough PIT evidence to evaluate:
+DLC owns the cross-sport/product **post-game feedback layer** while sport repositories retain sport-native learning authority.
+
+The governing contract is `docs/POST_GAME_FEEDBACK_LOOP_V1.md`.
+
+After settlement, DLC joins the exact published `DailyLinePublicationPackage` with sealed sport outcomes, sport-native advanced-stat diagnostics where available, DDC closing/market evidence, and provider settlement evidence.
+
+DLC then produces immutable individual-recommendation and EdgeStack outcome records, calibration aggregates, evidence-weighted miss attribution, recommendation-set concentration diagnostics, and research handoffs.
+
+The loop explicitly distinguishes irreducible outcome variance from systematic model/gate/correlation/data misses. A single game may create a finding or research proposal but may **not** directly alter sport-model weights, features, Recommendation Gates, or production configuration.
+
+Required long-run evaluation includes:
 
 - All Bets calibration by sport/market class;
-- Recommendation Gate results;
+- Recommendation Gate performance;
 - top-pick performance;
-- EdgeStack hit rate and calibration by leg count/class;
+- Brier score / log loss / reliability buckets;
+- EdgeStack hit rate and joint-probability calibration by leg count/class;
 - quoted break-even versus realized hit rate;
 - same-game vs cross-game performance;
 - cross-sport vs single-sport performance;
 - gross/net EV where calculable;
+- closing-line comparison where valid;
+- miss-attribution recurrence;
+- correlation residuals;
+- anchor/recommendation-set concentration;
 - quote freshness and execution availability;
 - publication-package timing effects.
 
-No future closing/result information may leak into an earlier DLC snapshot.
+No future closing/result information may leak into an earlier DLC snapshot. Research proposals must be re-tested point-in-time before any owning repository may promote a change.
 
 ## 13. Repository model
 
@@ -351,6 +366,7 @@ Daily-Line-Core/
     edgestack/
     publication/
     provenance/
+    evaluation/
   tests/
 ```
 
