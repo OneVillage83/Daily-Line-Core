@@ -576,3 +576,44 @@ A missing post-game diagnostic must never mutate the original prediction record.
 10. Recommendation-set concentration may be diagnosed without becoming bankroll management.
 11. The loop can say `NO_ACTION_GOOD_PROCESS`.
 12. No feedback finding may claim certainty that a proposed feature would have changed the realized outcome.
+
+
+## 18. Pregame signal-health research loop
+
+Sport-owned signal-health/regime engines are the preferred destination for recurring pregame state-change findings.
+
+For MLB, the current architecture is:
+
+- `OneVillage83/Daily-MLB/docs/PREGAME_SIGNAL_HEALTH_REGIME_ENGINE_V1.md`
+- DLC consumption boundary: `docs/PREGAME_SIGNAL_HEALTH_INTEGRATION_V1.md`
+
+Findings such as `FORM_TREND_MISS`, `MATCHUP_INTERACTION_MISS`, `FEATURE_GAP`, `FEATURE_WEIGHT_MISS`, or regime-specific `CALIBRATION_MISS` may create research proposals for SHARE.
+
+The required loop is:
+
+```text
+pregame signal-health state
+        |
+        v
+sport forecast / gate
+        |
+        v
+DLC / EdgeStack publication
+        |
+        v
+result + post-game diagnostics
+        |
+        v
+feedback finding
+        |
+        v
+sport SHARE research hypothesis
+        |
+        v
+PIT/OOS backtest
+        |
+        v
+reviewed promotion only
+```
+
+DLC never applies the post-game finding directly to tomorrow's sport probability.
