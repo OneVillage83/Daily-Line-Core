@@ -149,19 +149,47 @@ Repository-specific follow-up turns:
 
 Downstream consumers may transform presentation but may not recompute probabilities/gates/EdgeStacks.
 
-## DLC-11 — PIT historical evaluation / certification
+## DLC-11 — Post-game feedback / PIT evaluation / certification
 
+Governing architecture: `docs/POST_GAME_FEEDBACK_LOOP_V1.md`.
+
+### DLC-11A — Outcome + settlement join
+- join exact published `DailyLinePublicationPackage` to sealed final sport outcomes;
+- preserve original pregame probabilities/prices/gates unchanged;
+- create `RecommendationOutcomeRecord` and `EdgeStackOutcomeRecord`;
+- verify settlement correctness and supersession.
+
+### DLC-11B — Forensic attribution
+- ingest sport-native post-game diagnostic packages;
+- separate pregame-available signals from postgame-only evidence;
+- classify variance vs systematic miss categories;
+- emit evidence/confidence-backed `FeedbackFinding` records;
+- support `NO_ACTION_GOOD_PROCESS`.
+
+### DLC-11C — Rolling calibration + recurrence
 - replay exact historical cutoffs;
-- evaluate individual-market calibration;
-- evaluate Recommendation Gate performance;
+- evaluate individual-market calibration and Recommendation Gate performance;
+- Brier/log-loss/reliability buckets;
 - evaluate EdgeStack calibration by class/leg count;
-- same-game vs cross-game;
-- cross-sport vs same-sport;
+- same-game vs cross-game and cross-sport vs same-sport;
 - quote break-even vs realized results;
-- gross/net EV where defensible;
-- stale/availability audit;
-- settlement correctness;
-- promotion thresholds locked before production authority.
+- gross/net EV and closing-line comparison where valid;
+- miss-attribution recurrence;
+- correlation residuals;
+- anchor/recommendation-set concentration;
+- stale/availability audit.
+
+### DLC-11D — Research handoff / counterfactual
+- emit sport/DMC/DLC research proposals rather than production mutations;
+- require point-in-time counterfactuals using only evidence available before the original cutoff;
+- lock minimum sample/promotion thresholds before evaluating candidate windows;
+- require owner-repo champion/challenger, calibration, ablation and regression evidence.
+
+### DLC-11E — Certification
+- validate feedback records and provenance;
+- prove no postgame/closing leakage into pregame truth;
+- prove a single game cannot directly mutate production weights/features;
+- certify evaluation/promotion rules before production authority.
 
 ## DLC-12 — Bridge + operational onboarding
 
