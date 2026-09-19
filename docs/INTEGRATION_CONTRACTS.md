@@ -45,7 +45,19 @@ markets[]:
   supported/degraded/unsupported state
   settlement rule version
 
-joint_evidence_refs[]? 
+joint_evidence_refs[]?
+signal_health_summary?
+  summary_id
+  sport_signal_schema_version
+  as_of
+  overall_regime_class
+  state_divergence_score?
+  state_confidence?
+  mean_shift_summary?
+  uncertainty_shift_summary?
+  major_signal_refs[]
+  recommendation_risk_flags[]
+  source_state_ref
 explanation_claim_refs[]
 supersedes_package_id?
 ```
@@ -57,7 +69,16 @@ Rules:
 - unsupported markets are explicit;
 - DLC never fabricates missing probabilities;
 - package digest/version must validate before admission;
-- post-start information must not enter a pre-start package.
+- post-start information must not enter a pre-start package;
+- any `signal_health_summary` is sport-authored, PIT-bound, publication-safe, and optional; DLC must not reconstruct sport regime state from raw data or treat absence as `STABLE`.
+
+## 2.1 Pregame signal-health compatibility
+
+Sport repositories may expose an optional signal-health/regime summary after they have incorporated that state into their own independent forecast, uncertainty, market-aware decision, and Recommendation Gate.
+
+The cross-sport behavior is governed by `PREGAME_SIGNAL_HEALTH_INTEGRATION_V1.md`.
+
+DLC may display and use certified uncertainty/regime metadata as a product-ranking dimension, but it may not apply its own sport-specific probability adjustment.
 
 ## 3. `MarketEvidenceBundleRef`
 
