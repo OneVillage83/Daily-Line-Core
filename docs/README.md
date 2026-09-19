@@ -13,9 +13,11 @@ This directory contains the governing product/architecture documentation for Dai
 7. `OWNERSHIP_BOUNDARIES.md` — repository responsibility split.
 8. `INTEGRATION_CONTRACTS.md` — cross-repository contract intent.
 9. `EDGESTACK_PARLAY_OPTIMIZER_V1.md` — EdgeStack / All Bets product architecture.
-10. `IMPLEMENTATION_ROADMAP.md` — DLC-0 through DLC-12 sequence.
-11. `CHANGE_JOURNAL.md` — durable chronological memory.
-12. `EXTRACTION_PROVENANCE_20260917.md` — origin/extraction history from DDC staging.
+10. `PREGAME_SIGNAL_HEALTH_INTEGRATION_V1.md` — how DLC consumes sport-owned current-state/regime summaries without recalculating sport probabilities.
+11. `POST_GAME_FEEDBACK_LOOP_V1.md` — post-game forensic attribution, calibration, PIT counterfactual and research-handoff architecture.
+12. `IMPLEMENTATION_ROADMAP.md` — DLC-0 through DLC-12 sequence.
+13. `CHANGE_JOURNAL.md` — durable chronological memory.
+14. `EXTRACTION_PROVENANCE_20260917.md` — origin/extraction history from DDC staging.
 
 ## Current status
 
@@ -26,5 +28,7 @@ No production implementation or Bridge authority is granted by the repository se
 ## Product boundary summary
 
 DLC consumes sealed sport decision packages plus point-in-time DDC market evidence, assembles the All Bets Prediction Scanner, optimizes EdgeStack 2–5 leg combinations, builds cross-sport product rankings, and seals one immutable `DailyLinePublicationPackage` for downstream consumers.
+
+Sport-owned pregame signal-health/regime output may be carried in a sealed `SportDecisionPackage` as optional publication-safe metadata. DLC may use certified uncertainty/regime metadata for All Bets/EdgeStack ranking and explanation, but it does not recalculate sport state or fair probability.
 
 Report/infographic/website/TDLA render or distribute sealed DLC truth; they do not recompute it.
