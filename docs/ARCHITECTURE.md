@@ -158,9 +158,12 @@ Each sport repository emits a versioned sealed package containing at minimum:
 - sport explanation/evidence refs safe for publication;
 - settlement-rule version;
 - optional same-event joint-distribution/simulation refs for correlated-market evaluation;
+- optional sport-authored publication-safe signal-health/regime summary, bound to the same or earlier cutoff;
 - explicit supported/unsupported market declarations.
 
 The package is append-only/immutable once sealed. A later sport rerun creates a new package/revision.
+
+Pregame signal-health consumption is governed by `docs/PREGAME_SIGNAL_HEALTH_INTEGRATION_V1.md`. DLC may expose certified sport-authored regime/uncertainty metadata but may not recalculate sport state or alter the sport fair probability.
 
 ### 4.2 `MarketEvidenceBundle`
 
