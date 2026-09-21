@@ -15,9 +15,10 @@ This directory contains the governing product/architecture documentation for Dai
 9. `EDGESTACK_PARLAY_OPTIMIZER_V1.md` — EdgeStack / All Bets product architecture.
 10. `PREGAME_SIGNAL_HEALTH_INTEGRATION_V1.md` — how DLC consumes sport-owned current-state/regime summaries without recalculating sport probabilities.
 11. `POST_GAME_FEEDBACK_LOOP_V1.md` — post-game forensic attribution, calibration, PIT counterfactual and research-handoff architecture.
-12. `IMPLEMENTATION_ROADMAP.md` — DLC-0 through DLC-12 sequence.
-13. `CHANGE_JOURNAL.md` — durable chronological memory.
-14. `EXTRACTION_PROVENANCE_20260917.md` — origin/extraction history from DDC staging.
+12. `POSTGAME_IMPROVEMENT_RECONCILIATION_20260920.md` — maps the seven NFL/MLB post-game refinements to existing owners to prevent duplicate systems.
+13. `IMPLEMENTATION_ROADMAP.md` — DLC-0 through DLC-12 sequence.
+14. `CHANGE_JOURNAL.md` — durable chronological memory.
+15. `EXTRACTION_PROVENANCE_20260917.md` — origin/extraction history from DDC staging.
 
 ## Current status
 
