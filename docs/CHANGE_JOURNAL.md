@@ -55,3 +55,21 @@ Purpose: durable human-readable memory for material DLC changes.
 - **Risks/open questions:** Exact summary schema/ranges, compatibility versioning, and validated EdgeStack policy thresholds remain for DLC-1/DLC-8.
 - **Rollback/recovery:** Supersede/version these supplemental docs; do not rewrite prior publication records.
 - **Next exact step:** DLC still resumes at DLC-0 architecture/ownership conformance review. Signal-health implementation remains upstream in sport repos and later compatibility work in DLC-1.
+
+
+---
+
+## 2026-09-21T02:15:00Z — Seven post-game refinements reconciled with existing owners
+
+- **Change ID:** 2026-09-20 cross-sport post-game research reconciliation.
+- **Area:** post-game feedback / NFL current-state modeling / MLB SHARE / Recommendation Gate / DMC conditional trust.
+- **Summary:** Audited the seven improvement ideas from the Sept. 20 NFL/MLB post-game review against existing repositories. No duplicate early-season, pressure, offensive-system, pitcher-health, bullpen, recommendation-gate, or feedback system was added. Existing owners were strengthened through sport-specific addenda, roadmap placement, SHARE/bullpen refinements, DMC sample-maturity context, and DLC layer-specific attribution.
+- **Reason:** Several misses exposed real research questions, but the architecture already contains most required state and decision boundaries. New parallel engines would fragment authority and double count evidence.
+- **Files/components affected:** `docs/POSTGAME_IMPROVEMENT_RECONCILIATION_20260920.md`; `docs/POST_GAME_FEEDBACK_LOOP_V1.md`; Daily-NFL post-game refinement addendum and roadmap; Daily-MLB post-game refinement addendum/SHARE; DMC conditional-trust supplement.
+- **Authority/contract impact:** No production authority changed. Sport repositories remain authoritative for sport state/probability/gates; DLC remains post-game/product evaluator; DMC remains generic modeling governance.
+- **Data/migration impact:** None.
+- **Operational impact:** None.
+- **Validation/evidence:** Repository architecture and machine feature registry were inspected before documentation changes. Daily-NFL already has active early-season-prior projections and reserved pressure/NGS/matchup features; advanced tracking features remain unavailable pending certified source/rights. Daily-MLB already has SHARE, bullpen features and gate confidence boundaries.
+- **Risks/open questions:** Exact learned prior-decay policy, NGS licensing/PIT coverage, pressure feature activation, MLB reliever Statcast schema successor, and future gate thresholds require historical/prospective validation.
+- **Rollback/recovery:** Supersede these research docs if future evidence changes the design; do not rewrite frozen production/certified artifacts.
+- **Next exact step:** Preserve each repository's current implementation resume. Test these refinements only when their existing roadmap phase is explicitly authorized.
