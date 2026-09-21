@@ -46,6 +46,7 @@ Resume at:
 
 - `docs/PREGAME_SIGNAL_HEALTH_INTEGRATION_V1.md` — DLC consumption boundary for sport-owned current-state/regime summaries.
 - `docs/POST_GAME_FEEDBACK_LOOP_V1.md` — immutable outcome audit, miss attribution, PIT counterfactual and research-handoff loop.
+- `docs/POSTGAME_IMPROVEMENT_RECONCILIATION_20260920.md` — anti-duplication mapping for the seven 2026-09-20 NFL/MLB post-game refinements.
 
 These do not change the exact next step below or authorize implementation.
 
