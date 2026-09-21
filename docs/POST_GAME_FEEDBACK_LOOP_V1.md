@@ -617,3 +617,100 @@ reviewed promotion only
 ```
 
 DLC never applies the post-game finding directly to tomorrow's sport probability.
+
+
+## 19. Layer-specific attribution rule
+
+Post-game findings must identify **which layer actually failed** rather than assigning blame to the most visible pregame input.
+
+Every material finding should carry:
+
+```text
+primary_failure_layer
+contributing_failure_layers[]
+attribution_confidence
+counterfactual_scope
+pregame_signal_availability
+```
+
+Canonical layer families:
+
+```text
+DATA_OR_AUTHORITY
+PLAYER_CURRENT_STATE
+UNIT_STATE
+MATCHUP_INTERACTION
+TEAM_STATE
+SIMULATION_OR_DISTRIBUTION
+CALIBRATION
+RECOMMENDATION_GATE
+EDGESTACK_OR_PRODUCT
+OUTCOME_VARIANCE
+```
+
+Sport packages may add finer sport-native sublayers such as:
+
+```text
+MLB_STARTER_STATE
+MLB_BULLPEN_STATE
+MLB_LINEUP_STATE
+NFL_QB_PRESSURE_RESPONSE
+NFL_PASS_PROTECTION_PASS_RUSH
+NFL_COVERAGE_MATCHUP
+NFL_SYSTEM_MATURITY
+```
+
+### Do not blame the wrong layer
+
+Examples:
+
+- A starter performs near expectation, the team leads late, and the bullpen gives up the decisive runs -> investigate `MLB_BULLPEN_STATE`, not automatically the starter model.
+- An offense gains substantial yardage but repeatedly fails on third/fourth down -> separate sustainable efficiency from high-leverage conversion variance.
+- A favorite loses because of multiple turnovers while its underlying efficiency remains strong -> do not automatically create a broad team-form downgrade.
+- A fair-side estimate slightly misses but the Recommendation Gate correctly rejects an overpriced favorite -> record a **prediction-side miss / decision-layer success**.
+- A recommendation wins despite poor underlying process -> do not mark every contributing layer as successful merely because settlement was WIN.
+
+### Three distinct scores
+
+Post-game evaluation should preserve:
+
+1. **Prediction quality**
+   - probability calibration;
+   - distribution quality;
+   - ranking/fair-side accuracy as a secondary diagnostic.
+
+2. **Decision quality**
+   - price vs fair probability;
+   - Recommendation Gate;
+   - quote timing/freshness;
+   - EdgeStack construction.
+
+3. **Outcome**
+   - final settlement only.
+
+These must not collapse into one W/L label.
+
+## 20. Conservative attribution threshold
+
+A single game may produce:
+
+- `OBSERVATION`;
+- `MONITOR`;
+- `RESEARCH_CANDIDATE`;
+
+but should normally require repeated PIT-consistent evidence before becoming:
+
+- `BACKTEST_REQUIRED`;
+- `CALIBRATION_REVIEW`;
+- `FEATURE_WEIGHT_REVIEW`;
+- `PROMOTION_CANDIDATE`.
+
+A high-confidence data defect or authority error may escalate immediately because that is a correctness issue rather than a statistical-learning claim.
+
+## 21. 2026-09-20 reconciliation
+
+The seven improvements identified in the NFL/MLB post-game audit are mapped to existing system owners in:
+
+`docs/POSTGAME_IMPROVEMENT_RECONCILIATION_20260920.md`
+
+This mapping is intentionally anti-duplication: early-season priors, NFL pressure response, coaching/system regime, MLB current-state health, bullpen state and Recommendation Gate uncertainty already have owners. The feedback loop routes evidence to those owners rather than creating parallel systems.
