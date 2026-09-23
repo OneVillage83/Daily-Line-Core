@@ -1,6 +1,6 @@
 # Daily-Line-Core — Current Resume Point
 
-Last updated: 2026-09-17 (America/Los_Angeles)  
+Last updated: 2026-09-23 (America/Los_Angeles)  
 Authority: this file is the single exact continuation point for unfinished DLC work. It does not by itself certify architecture or implementation.
 
 ## Current state
@@ -8,6 +8,7 @@ Authority: this file is the single exact continuation point for unfinished DLC w
 - `OneVillage83/Daily-Line-Core` now exists and is the canonical repository for DLC architecture.
 - Initial architecture was staged first in `OneVillage83/Daily-Data-Core/docs/daily_line_core/` and extracted here on 2026-09-17.
 - DLC mission/ownership, All Bets, EdgeStack, publication-package, pregame signal-health consumption, and post-game feedback architecture are documented.
+- Cross-system **The Daily Line Live V1** architecture is now documented as a supplemental review baseline covering proposed `Daily-Data-Live-Core`, `Daily-[Sport]-Live`, `Daily-Line-Live-Core`, the pregame/live contamination firewall, state-price synchronization, live model/trajectory architecture, Live Recommendation Gate, shadow-live validation and release sequencing.
 - **DLC-0 is DOCUMENTED — REVIEW PENDING.**
 - No production implementation is authoritative.
 - No live Kalshi/provider Combo integration is authorized.
@@ -47,8 +48,9 @@ Resume at:
 - `docs/PREGAME_SIGNAL_HEALTH_INTEGRATION_V1.md` — DLC consumption boundary for sport-owned current-state/regime summaries.
 - `docs/POST_GAME_FEEDBACK_LOOP_V1.md` — immutable outcome audit, miss attribution, PIT counterfactual and research-handoff loop.
 - `docs/POSTGAME_IMPROVEMENT_RECONCILIATION_20260920.md` — anti-duplication mapping for the seven 2026-09-20 NFL/MLB post-game refinements.
+- `docs/THE_DAILY_LINE_LIVE_ARCHITECTURE_V1.md` — cross-system TDL Live design; proposes separate live evidence, sport-live and live product layers while permitting only a one-way immutable Pregame→Live prior bridge.
 
-These do not change the exact next step below or authorize implementation.
+These do not change the exact DLC next step below or authorize implementation. TDL Live separately resumes at **TDL-LIVE-0 review/freeze** before any proposed live repository is created.
 
 ## DLC-1 after certification
 
