@@ -1,0 +1,450 @@
+{
+  "contract_version": "TDL_SHADOW_AUDIT_SNAPSHOT_V1",
+  "research_only": true,
+  "production_authority": false,
+  "sport": "MLB",
+  "slate_date": "2026-09-23",
+  "snapshot_time": "2026-09-23T13:07:00-07:00",
+  "snapshot_timezone": "America/Los_Angeles",
+  "point_in_time_rule": "Games already started at snapshot_time are excluded from the pregame snapshot.",
+  "methodology": {
+    "market_independent_prediction": true,
+    "run_distribution": "independent Poisson shadow approximation",
+    "team_offense": "2026 season runs/game baseline",
+    "starter_proxy": "ERA/xERA-weighted run-prevention proxy where available; lower-confidence expected/FIP proxy when xERA unavailable",
+    "starter_bullpen_transition": "expected starter innings plus 2026 bullpen ERA for remaining innings",
+    "statcast_matchup": "current-roster xwOBA evidence with aggressive sample-size shrinkage",
+    "environment": "park/weather adjustment with explicit uncertainty",
+    "disagreement_diagnostic": "season-record Log5 baseline, not blended into the fair probability",
+    "market_firewall": "market observed only after independent fair view",
+    "note": "Shadow approximation of TDL philosophy; not the trained/certified Daily MLB production model."
+  },
+  "excluded_games": [
+    {
+      "matchup": "WSH@DET",
+      "gate": "EXCLUDED_ALREADY_STARTED"
+    },
+    {
+      "matchup": "TOR@BAL_G1",
+      "gate": "EXCLUDED_ALREADY_STARTED"
+    },
+    {
+      "matchup": "MIN@SF",
+      "gate": "EXCLUDED_ALREADY_STARTED"
+    }
+  ],
+  "games": [
+    {
+      "matchup": "TOR@BAL_G2",
+      "projected_away_runs": null,
+      "projected_home_runs": null,
+      "model_favored_side": null,
+      "shadow_probability": null,
+      "fair_american": null,
+      "diagnostic_probability_range": null,
+      "disagreement": "UNRESOLVED",
+      "data_quality": "INSUFFICIENT",
+      "market_snapshot": {
+        "tor_decimal_equivalent_note": "+106",
+        "bal_american": -127,
+        "total": 7.5
+      },
+      "raw_edge_pp": null,
+      "estimated_ev_pct": null,
+      "gate": "WATCH",
+      "gate_reason": [
+        "STARTERS_TBA",
+        "DOUBLEHEADER_BULLPEN_STATE_UNRESOLVED"
+      ],
+      "price_threshold": null
+    },
+    {
+      "matchup": "STL@PIT",
+      "projected_away_runs": 3.82,
+      "projected_home_runs": 5.57,
+      "model_favored_side": "PIT",
+      "shadow_probability": 0.7142,
+      "fair_american": -250,
+      "diagnostic_probability_range": [
+        0.525,
+        0.7142
+      ],
+      "disagreement": "HIGH",
+      "data_quality": "DEGRADED",
+      "market_snapshot": {
+        "stl_american": 100,
+        "pit_american": -118,
+        "total": 7.5
+      },
+      "market_no_vig_probability_selected": 0.5198,
+      "raw_edge_pp": 19.44,
+      "estimated_ev_pct": 31.95,
+      "gate": "PASS",
+      "gate_reason": [
+        "HIGH_MODEL_DISAGREEMENT",
+        "LINEUP_NOT_CONFIRMED"
+      ],
+      "secondary_signals": [
+        {
+          "market": "TOTAL_OVER_7_5",
+          "gate": "LEAN"
+        }
+      ],
+      "price_threshold": null
+    },
+    {
+      "matchup": "MIL@PHI",
+      "projected_away_runs": 5.1,
+      "projected_home_runs": 3.24,
+      "model_favored_side": "MIL",
+      "shadow_probability": 0.7378,
+      "fair_american": -281,
+      "diagnostic_probability_range": [
+        0.572,
+        0.7378
+      ],
+      "disagreement": "MODERATE",
+      "data_quality": "DEGRADED",
+      "market_snapshot": {
+        "mil_american": -125,
+        "phi_american": 106,
+        "total": 7
+      },
+      "market_no_vig_probability_selected": 0.5337,
+      "raw_edge_pp": 20.41,
+      "estimated_ev_pct": 32.8,
+      "gate": "RECOMMEND",
+      "gate_reason": [
+        "PROVISIONAL_PENDING_CONFIRMED_LINEUP"
+      ],
+      "secondary_signals": [
+        {
+          "market": "TOTAL_OVER_7",
+          "gate": "LEAN"
+        }
+      ],
+      "price_threshold": "MIL -125 or better"
+    },
+    {
+      "matchup": "TB@NYY",
+      "projected_away_runs": 3.83,
+      "projected_home_runs": 4.54,
+      "model_favored_side": "NYY",
+      "shadow_probability": 0.596,
+      "fair_american": -148,
+      "diagnostic_probability_range": [
+        0.46,
+        0.596
+      ],
+      "disagreement": "DIRECTIONAL_CONFLICT",
+      "data_quality": "INSUFFICIENT",
+      "market_snapshot": {
+        "tb_american": 120,
+        "nyy_american": -145,
+        "total": 6.5
+      },
+      "raw_edge_pp": null,
+      "estimated_ev_pct": null,
+      "gate": "AVOID",
+      "gate_reason": [
+        "STARTER_SOURCE_CONFLICT",
+        "LINEUP_NOT_CONFIRMED"
+      ],
+      "price_threshold": null
+    },
+    {
+      "matchup": "CLE@BOS",
+      "projected_away_runs": 3.02,
+      "projected_home_runs": 4.72,
+      "model_favored_side": "BOS",
+      "shadow_probability": 0.7273,
+      "fair_american": -267,
+      "diagnostic_probability_range": [
+        0.519,
+        0.7273
+      ],
+      "disagreement": "HIGH",
+      "data_quality": "DEGRADED",
+      "market_snapshot": {
+        "cle_american": 114,
+        "bos_american": -134,
+        "total": 6.5
+      },
+      "market_no_vig_probability_selected": 0.5507,
+      "raw_edge_pp": 17.66,
+      "estimated_ev_pct": 27,
+      "gate": "LEAN",
+      "gate_reason": [
+        "HIGH_MODEL_DISAGREEMENT",
+        "LINEUP_NOT_CONFIRMED"
+      ],
+      "price_threshold": "upgrade only after lineup/state refresh and disagreement review"
+    },
+    {
+      "matchup": "CIN@ATL",
+      "projected_away_runs": 2.67,
+      "projected_home_runs": 5.33,
+      "model_favored_side": "ATL",
+      "shadow_probability": 0.8255,
+      "fair_american": -473,
+      "diagnostic_probability_range": [
+        0.62,
+        0.8255
+      ],
+      "disagreement": "MODERATE_HIGH",
+      "data_quality": "DEGRADED",
+      "market_snapshot": {
+        "cin_american": 210,
+        "atl_american": -255,
+        "total": 7.5
+      },
+      "market_no_vig_probability_selected": 0.6901,
+      "raw_edge_pp": 13.54,
+      "estimated_ev_pct": 14.89,
+      "gate": "PASS",
+      "gate_reason": [
+        "PRICE_TOO_EXPENSIVE_VS_CONSERVATIVE_VIEW",
+        "WEATHER_UNCERTAINTY",
+        "LINEUP_NOT_CONFIRMED"
+      ],
+      "secondary_signals": [
+        {
+          "market": "ATL_-1.5",
+          "gate": "LEAN"
+        }
+      ],
+      "price_threshold": null
+    },
+    {
+      "matchup": "CWS@KC",
+      "projected_away_runs": 5.86,
+      "projected_home_runs": 4.08,
+      "model_favored_side": "CWS",
+      "shadow_probability": 0.7122,
+      "fair_american": -247,
+      "diagnostic_probability_range": [
+        0.583,
+        0.7122
+      ],
+      "disagreement": "MODERATE",
+      "data_quality": "DEGRADED",
+      "market_snapshot": {
+        "cws_american": -118,
+        "kc_american": -102,
+        "total": 8.5
+      },
+      "market_no_vig_probability_selected": 0.5174,
+      "raw_edge_pp": 19.48,
+      "estimated_ev_pct": 31.47,
+      "gate": "RECOMMEND",
+      "gate_reason": [
+        "PROVISIONAL_PENDING_CONFIRMED_LINEUP",
+        "PROBABLE_PITCHER_PROVIDER_CONFLICT_RESOLVED_TO_OFFICIAL_TEAM_SOURCE"
+      ],
+      "secondary_signals": [
+        {
+          "market": "TOTAL_OVER_8.5",
+          "gate": "LEAN"
+        }
+      ],
+      "price_threshold": "CWS to approximately -125"
+    },
+    {
+      "matchup": "MIA@CHC",
+      "projected_away_runs": 3.93,
+      "projected_home_runs": 5.49,
+      "model_favored_side": "CHC",
+      "shadow_probability": 0.692,
+      "fair_american": -225,
+      "diagnostic_probability_range": [
+        0.564,
+        0.692
+      ],
+      "disagreement": "MODERATE",
+      "data_quality": "DEGRADED",
+      "market_snapshot": {
+        "mia_american": 151,
+        "chc_american": -184,
+        "total": 6.5
+      },
+      "market_no_vig_probability_selected": 0.6192,
+      "raw_edge_pp": 7.28,
+      "estimated_ev_pct": 6.08,
+      "gate": "PASS",
+      "gate_reason": [
+        "WEATHER_MODEL_CONTRADICTION",
+        "LINEUP_NOT_CONFIRMED"
+      ],
+      "secondary_signals": [
+        {
+          "market": "TOTAL",
+          "gate": "PASS",
+          "reason": "Wrigley weather suppressive uncertainty conflicts with raw run mean"
+        }
+      ],
+      "price_threshold": null
+    },
+    {
+      "matchup": "NYM@TEX",
+      "projected_away_runs": 4.55,
+      "projected_home_runs": 3.58,
+      "model_favored_side": "NYM",
+      "shadow_probability": 0.6313,
+      "fair_american": -171,
+      "diagnostic_probability_range": [
+        0.462,
+        0.6313
+      ],
+      "disagreement": "DIRECTIONAL_CONFLICT",
+      "data_quality": "DEGRADED",
+      "market_snapshot": {
+        "nym_american": -110,
+        "tex_american": -109,
+        "total": 7.5
+      },
+      "market_no_vig_probability_selected": 0.5011,
+      "raw_edge_pp": 13.02,
+      "estimated_ev_pct": 20.52,
+      "gate": "PASS",
+      "gate_reason": [
+        "DIRECTIONAL_MODEL_CONFLICT",
+        "BVP_SAMPLE_SMALL",
+        "LINEUP_NOT_CONFIRMED"
+      ],
+      "price_threshold": null
+    },
+    {
+      "matchup": "ARI@COL",
+      "projected_away_runs": 6.39,
+      "projected_home_runs": 6.74,
+      "model_favored_side": "COL",
+      "shadow_probability": 0.5375,
+      "fair_american": -116,
+      "diagnostic_probability_range": [
+        0.337,
+        0.663
+      ],
+      "disagreement": "SEVERE_DIRECTIONAL_CONFLICT",
+      "data_quality": "DEGRADED",
+      "market_snapshot": {
+        "ari_american": -160,
+        "col_american": 135,
+        "total": 11
+      },
+      "market_no_vig_probability_selected": null,
+      "raw_edge_pp": null,
+      "estimated_ev_pct": null,
+      "gate": "AVOID",
+      "gate_reason": [
+        "SEVERE_MODEL_DISAGREEMENT",
+        "WEATHER_RISK",
+        "STARTER_SAMPLE_UNCERTAINTY"
+      ],
+      "secondary_signals": [
+        {
+          "market": "TOTAL_11",
+          "gate": "WATCH"
+        }
+      ],
+      "price_threshold": null
+    },
+    {
+      "matchup": "LAA@ATH",
+      "projected_away_runs": 5.45,
+      "projected_home_runs": 3.81,
+      "model_favored_side": "LAA",
+      "shadow_probability": 0.7024,
+      "fair_american": -236,
+      "diagnostic_probability_range": [
+        0.507,
+        0.7024
+      ],
+      "disagreement": "HIGH",
+      "data_quality": "DEGRADED",
+      "market_snapshot": {
+        "laa_american": -136,
+        "ath_american": 116,
+        "total": 9.5
+      },
+      "market_no_vig_probability_selected": 0.5545,
+      "raw_edge_pp": 14.79,
+      "estimated_ev_pct": 21.88,
+      "gate": "LEAN",
+      "gate_reason": [
+        "HIGH_MODEL_DISAGREEMENT",
+        "LINEUP_NOT_CONFIRMED"
+      ],
+      "price_threshold": "possible upgrade after lineup confirmation"
+    },
+    {
+      "matchup": "SD@LAD",
+      "projected_away_runs": 3.16,
+      "projected_home_runs": 5.01,
+      "model_favored_side": "LAD",
+      "shadow_probability": 0.7394,
+      "fair_american": -284,
+      "diagnostic_probability_range": [
+        0.565,
+        0.7394
+      ],
+      "disagreement": "MODERATE_HIGH",
+      "data_quality": "DEGRADED",
+      "market_snapshot": {
+        "sd_american": 188,
+        "lad_american": -225,
+        "total": 8.5
+      },
+      "market_no_vig_probability_selected": 0.666,
+      "raw_edge_pp": 7.34,
+      "estimated_ev_pct": 6.8,
+      "gate": "PASS",
+      "gate_reason": [
+        "PRICE_TOO_EXPENSIVE_VS_CONSERVATIVE_VIEW",
+        "LINEUP_NOT_CONFIRMED"
+      ],
+      "secondary_signals": [
+        {
+          "market": "LAD_-1.5",
+          "gate": "LEAN"
+        }
+      ],
+      "price_threshold": null
+    },
+    {
+      "matchup": "HOU@SEA",
+      "projected_away_runs": 4.11,
+      "projected_home_runs": 4.03,
+      "model_favored_side": "HOU",
+      "shadow_probability": 0.5115,
+      "fair_american": -105,
+      "diagnostic_probability_range": [
+        0.5115,
+        0.538
+      ],
+      "disagreement": "LOW",
+      "data_quality": "DEGRADED",
+      "market_snapshot": {
+        "hou_american": 105,
+        "sea_american": -125,
+        "total": 7.5
+      },
+      "market_no_vig_probability_selected": 0.4675,
+      "raw_edge_pp": 4.4,
+      "estimated_ev_pct": 4.86,
+      "gate": "RECOMMEND",
+      "gate_reason": [
+        "SMALL_EDGE",
+        "PROVISIONAL_PENDING_CONFIRMED_LINEUP",
+        "PECKO_SMALL_MLB_SAMPLE"
+      ],
+      "secondary_signals": [
+        {
+          "market": "TOTAL_OVER_7.5",
+          "gate": "LEAN"
+        }
+      ],
+      "price_threshold": "HOU +100 or better"
+    }
+  ],
+  "settlement": null
+}

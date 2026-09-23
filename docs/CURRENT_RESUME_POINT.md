@@ -1,6 +1,6 @@
 # Daily-Line-Core — Current Resume Point
 
-Last updated: 2026-09-17 (America/Los_Angeles)  
+Last updated: 2026-09-23 (America/Los_Angeles)  
 Authority: this file is the single exact continuation point for unfinished DLC work. It does not by itself certify architecture or implementation.
 
 ## Current state
@@ -41,6 +41,12 @@ Do **not** jump directly to EdgeStack implementation, Kalshi RFQ calls, live pro
 Resume at:
 
 > **DLC-0 architecture/ownership conformance review.** Review the seeded architecture against current `Daily-Data-Core`, `Daily-Model-Core`, Daily-MLB, Daily-NFL, Daily-NCAAF, website and TDLA boundaries. Correct contradictions through versioned documentation. If clean, mark DLC-0 `ARCHITECTURE-CERTIFIED` and proceed to DLC-1 canonical contracts/fixtures.
+
+## Research-only shadow audit evidence
+
+- `research/shadow_audits/` now contains the non-authoritative **TDL Shadow Audit Ledger V1**.
+- The ledger preserves manual pregame/live audit probabilities, market snapshots, Gate states, revisions and later settlement for research comparison.
+- It is not a production model/gate/publication source and does not change the exact DLC implementation resume point.
 
 ## Supplemental architecture now included
 

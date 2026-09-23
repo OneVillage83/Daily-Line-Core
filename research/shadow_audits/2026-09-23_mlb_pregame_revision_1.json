@@ -1,0 +1,49 @@
+{
+  "contract_version": "TDL_SHADOW_AUDIT_REVISION_V1",
+  "research_only": true,
+  "production_authority": false,
+  "sport": "MLB",
+  "slate_date": "2026-09-23",
+  "base_snapshot_ref": "2026-09-23_mlb_pregame_1307PT.json",
+  "base_snapshot_time": "2026-09-23T13:07:00-07:00",
+  "revision_sequence": 1,
+  "revision_reason": "Source reconciliation and market refresh completed before final chat publication. Base snapshot is retained unchanged.",
+  "changes": [
+    {
+      "matchup": "CWS@KC",
+      "change_type": "STARTER_ROLE_RECONCILIATION",
+      "prior_assumption": "Erick Fedde as CHW starter",
+      "corrected_evidence": "Bryan Hudson listed by Baseball Savant/current matchup coverage as opener/short-stint starter; Seth Lugo remains KC starter.",
+      "impact": {
+        "model_familiarity": "LOW",
+        "projected_away_runs_approx": 5.8,
+        "projected_home_runs_approx": 3.8,
+        "shadow_probability_central_approx": 0.77,
+        "diagnostic_probability_range_approx": [
+          0.583,
+          0.77
+        ],
+        "prior_gate": "RECOMMEND",
+        "revised_gate": "WATCH",
+        "reason_codes": [
+          "OPENER_BULLPEN_GAME_OUT_OF_DISTRIBUTION",
+          "BULK_PITCHER_USAGE_UNRESOLVED",
+          "LINEUP_NOT_CONFIRMED"
+        ]
+      }
+    },
+    {
+      "matchup": "MIL@PHI",
+      "change_type": "MARKET_PRICE_REFRESH",
+      "prior_market": "MIL -125",
+      "refreshed_market_observations": "MIL prices observed from approximately -133 to -144 across refreshed public sources",
+      "fair_probability_unchanged": true,
+      "prior_gate": "RECOMMEND",
+      "revised_gate_at_worse_price": "LEAN_OR_PASS",
+      "action_threshold": "RECOMMEND only at MIL -125 or better",
+      "reason_codes": [
+        "PRICE_MOVED_PAST_SHADOW_THRESHOLD"
+      ]
+    }
+  ]
+}

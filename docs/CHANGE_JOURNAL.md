@@ -73,3 +73,21 @@ Purpose: durable human-readable memory for material DLC changes.
 - **Risks/open questions:** Exact learned prior-decay policy, NGS licensing/PIT coverage, pressure feature activation, MLB reliever Statcast schema successor, and future gate thresholds require historical/prospective validation.
 - **Rollback/recovery:** Supersede these research docs if future evidence changes the design; do not rewrite frozen production/certified artifacts.
 - **Next exact step:** Preserve each repository's current implementation resume. Test these refinements only when their existing roadmap phase is explicitly authorized.
+
+
+---
+
+## 2026-09-23T20:07:00Z — TDL Shadow Audit Ledger V1 started
+
+- **Change ID:** shadow-audit-ledger-v1.
+- **Area:** research / manual audit evaluation / recommendation-gate evidence.
+- **Summary:** Added a research-only immutable-style ledger for manual TDL Shadow Audits. The ledger defines prediction-vs-decision evaluation fields, retains RECOMMEND/LEAN/PASS/AVOID/WATCH states, adds a reconstructed 2026-09-20 through 2026-09-22 baseline, and seals the 2026-09-23 MLB pregame snapshot at 13:07 America/Los_Angeles. Already-started games are explicitly excluded from the pregame snapshot rather than backfilled.
+- **Reason:** The Sunday-through-Tuesday audits showed that likely-winner accuracy and price/actionability are separate learning problems. Future audits need exact contemporaneous probability, price, Gate, revision and settlement evidence instead of chat-only reconstruction.
+- **Files/components affected:** `research/shadow_audits/README.md`; `research/shadow_audits/2026-09-20_to_2026-09-22_reconstructed_baseline.md`; `research/shadow_audits/2026-09-23_mlb_pregame_1307PT.json`.
+- **Authority/contract impact:** None. The ledger is explicitly research-only and cannot supersede sport model registries, certified Recommendation Gates, publication packages or production authority.
+- **Data/migration impact:** None. No production schema or database migration.
+- **Operational impact:** None. No provider execution, publishing or wagering action.
+- **Validation/evidence:** Snapshot methodology follows the market-firewall, immutable-revision and prediction-vs-recommendation principles already documented across Daily MLB/DMC/DLC. The historical baseline is permanently labeled reconstructed because exact PIT artifacts did not yet exist.
+- **Risks/open questions:** The shadow formulas are approximations, not certified models. Exact Brier/log-loss/CLV evaluation requires contemporaneous market closes and immutable settlement appendices. Gate thresholds remain research policy, not production policy.
+- **Rollback/recovery:** Supersede/version research snapshots; never rewrite earlier research rows to match later information.
+- **Next exact step:** Continue generating timestamped MLB Shadow Audit snapshots, append postgame settlement/evaluation, and compare Gate buckets without changing production authority.
