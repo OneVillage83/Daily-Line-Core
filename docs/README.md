@@ -16,15 +16,18 @@ This directory contains the governing product/architecture documentation for Dai
 10. `PREGAME_SIGNAL_HEALTH_INTEGRATION_V1.md` — how DLC consumes sport-owned current-state/regime summaries without recalculating sport probabilities.
 11. `POST_GAME_FEEDBACK_LOOP_V1.md` — post-game forensic attribution, calibration, PIT counterfactual and research-handoff architecture.
 12. `POSTGAME_IMPROVEMENT_RECONCILIATION_20260920.md` — maps the seven NFL/MLB post-game refinements to existing owners to prevent duplicate systems.
-13. `IMPLEMENTATION_ROADMAP.md` — DLC-0 through DLC-12 sequence.
-14. `CHANGE_JOURNAL.md` — durable chronological memory.
-15. `EXTRACTION_PROVENANCE_20260917.md` — origin/extraction history from DDC staging.
+13. `THE_DAILY_LINE_LIVE_ARCHITECTURE_V1.md` — cross-system architecture for Daily Data Live Core, sport-live engines, Daily-Line-Live-Core, contamination firewall, live modeling, synchronization, validation and release.
+14. `IMPLEMENTATION_ROADMAP.md` — DLC-0 through DLC-12 sequence.
+15. `CHANGE_JOURNAL.md` — durable chronological memory.
+16. `EXTRACTION_PROVENANCE_20260917.md` — origin/extraction history from DDC staging.
 
 ## Current status
 
 **DLC-0: DOCUMENTED — REVIEW PENDING.**
 
 No production implementation or Bridge authority is granted by the repository seed.
+
+**TDL-LIVE-0: DOCUMENTED — REVIEW PENDING.** The live architecture is supplemental cross-system design only and grants no repository creation, provider, implementation, recommendation, or production authority.
 
 ## Product boundary summary
 
