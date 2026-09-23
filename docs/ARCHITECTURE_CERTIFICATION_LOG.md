@@ -29,9 +29,20 @@ This file is the authoritative milestone/status record for DLC architecture and 
 | DLC-11 | Post-game feedback, PIT evaluation and certification | Planned | Governing feedback architecture documented; single-game findings cannot directly mutate production. |
 | DLC-12 | Bridge + operational onboarding | Planned | Requires TDLA Bridge proving-ground acceptance + owner authorization. |
 
+## Cross-system supplemental architecture milestones
+
+| Milestone | Scope | Status | Evidence / note |
+|---|---|---|---|
+| TDL-LIVE-0 | Cross-system live topology, contamination firewall, DDLC / sport-live / DLLC ownership, synchronization, live modeling/gate and release plan | **DOCUMENTED — REVIEW PENDING** | `docs/THE_DAILY_LINE_LIVE_ARCHITECTURE_V1.md`; documentation only, no repository creation or implementation authority. |
+| DDLC-1+ | Daily Data Live Core evidence/market implementation | Planned | Requires TDL-LIVE-0 review/freeze and explicit repository/implementation authorization. |
+| Sport-Live-1+ | Sport-specific live state/model/gate implementations, beginning with MLB | Planned | Requires DDLC contracts plus sport-repository-specific authorization and validation. |
+| DLLC-1+ | Cross-sport live product assembly | Planned | Requires sealed sport-live decision contracts and explicit DLLC repository authority. |
+
 ## Current authority statement
 
 No DLC code path, recommendation output, EdgeStack output, publication package, provider integration, or Bridge workflow is production-authoritative.
+
+No TDL Live repository, live provider integration, live model, live recommendation, live publication, Live EdgeStack, automated wagering path, or live Bridge workflow is authorized by TDL-LIVE-0 documentation.
 
 The architecture files are design authority only after DLC-0 review/certification. Until then, they are the review baseline.
 
