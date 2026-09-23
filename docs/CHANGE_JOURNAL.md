@@ -73,3 +73,21 @@ Purpose: durable human-readable memory for material DLC changes.
 - **Risks/open questions:** Exact learned prior-decay policy, NGS licensing/PIT coverage, pressure feature activation, MLB reliever Statcast schema successor, and future gate thresholds require historical/prospective validation.
 - **Rollback/recovery:** Supersede these research docs if future evidence changes the design; do not rewrite frozen production/certified artifacts.
 - **Next exact step:** Preserve each repository's current implementation resume. Test these refinements only when their existing roadmap phase is explicitly authorized.
+
+
+---
+
+## 2026-09-23T09:16:00Z — The Daily Line Live cross-system architecture documented
+
+- **Change ID:** TDL-LIVE-0 architecture baseline V1.
+- **Area:** cross-system architecture / live evidence / live sport modeling / live product aggregation / governance.
+- **Summary:** Added a comprehensive cross-system architecture for The Daily Line Live. The design proposes `Daily-Data-Live-Core` for real-time provider/event/market evidence, separate `Daily-[Sport]-Live` engines for sport-owned in-game state/features/models/gates, and `Daily-Line-Live-Core` for cross-sport All Live Bets/product assembly. It freezes the conceptual one-way Pregame→Live prior bridge, explicit PRE_GAME/LIVE namespaces, independent live market firewall, state-price synchronization requirement, live trajectory/direct-model ensemble, uncertainty-aware value math, Live Recommendation Gate with WATCH semantics, immutable live state/prediction history, observability, settlement, state-matched price evaluation, and staged validation/release plan.
+- **Reason:** Manual MLB live audits demonstrated that in-game state can materially change winner/total probabilities while an otherwise correct winner prediction may still be a poor bet at the available live price. The live product needs its own scientifically isolated pipeline rather than mutating the pregame system.
+- **Files/components affected:** `docs/THE_DAILY_LINE_LIVE_ARCHITECTURE_V1.md`; `docs/README.md`; `docs/CURRENT_RESUME_POINT.md`; `docs/ARCHITECTURE_CERTIFICATION_LOG.md`.
+- **Authority/contract impact:** Documentation only. Establishes a review baseline, not implementation authority. Existing DLC ownership remains unchanged. Pregame truth remains immutable; Live may consume a sealed Pregame forecast only as an immutable prior and may never write back into Pregame evidence/models/decisions.
+- **Data/migration impact:** None.
+- **Operational impact:** None. No live provider was connected, no live repository was created, no live recommendation endpoint was enabled, and no wager execution capability was added.
+- **Validation/evidence:** Reconciled against current Daily-Line-Core ownership/governance, Daily-Data-Core market/evidence boundaries, Daily-MLB GameState/GAME_TRAJECTORY concepts, Daily-MLB live-pregame runner limitations, Recommendation Gate architecture, and Daily-Model-Core conditional-trust/OOS principles.
+- **Risks/open questions:** Provider in-play latency/rights, synchronization thresholds, historical live-odds availability, exact PRE_GAME→LIVE prior contract, live state schemas by sport, WATCH policy, model calibration requirements, proposed repository names and operational latency targets remain for TDL-LIVE-0 review.
+- **Rollback/recovery:** Supersede/version the architecture document; do not erase the record or alter existing pregame contracts.
+- **Next exact step:** Perform TDL-LIVE-0 review/freeze of names, ownership, contamination firewall, state-price synchronization, prior handoff, model scope, initial MLB markets and repository creation order before authorizing any live implementation.
