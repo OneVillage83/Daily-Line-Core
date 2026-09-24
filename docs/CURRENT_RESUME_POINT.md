@@ -1,6 +1,6 @@
 # Daily-Line-Core — Current Resume Point
 
-Last updated: 2026-09-17 (America/Los_Angeles)  
+Last updated: 2026-09-24 (America/Los_Angeles)  
 Authority: this file is the single exact continuation point for unfinished DLC work. It does not by itself certify architecture or implementation.
 
 ## Current state
