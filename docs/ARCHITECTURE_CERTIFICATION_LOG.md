@@ -28,6 +28,7 @@ This file is the authoritative milestone/status record for DLC architecture and 
 | DLC-10 | Downstream consumer contracts | Planned | Cross-repository work split by repository. |
 | DLC-11 | Post-game feedback, PIT evaluation and certification | Planned | Governing feedback architecture documented; single-game findings cannot directly mutate production. |
 | DLC-12 | Bridge + operational onboarding | Planned | Requires TDLA Bridge proving-ground acceptance + owner authorization. |
+| DLC-FE | Fact Engine / Game Intel supplemental architecture | **DOCUMENTED — REVIEW PENDING** | Display facts are zero-weight by default; sport predictive promotion requires PIT/OOS evidence. Does not change DLC-0 status. |
 
 ## Current authority statement
 
