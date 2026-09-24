@@ -73,3 +73,21 @@ Purpose: durable human-readable memory for material DLC changes.
 - **Risks/open questions:** Exact learned prior-decay policy, NGS licensing/PIT coverage, pressure feature activation, MLB reliever Statcast schema successor, and future gate thresholds require historical/prospective validation.
 - **Rollback/recovery:** Supersede these research docs if future evidence changes the design; do not rewrite frozen production/certified artifacts.
 - **Next exact step:** Preserve each repository's current implementation resume. Test these refinements only when their existing roadmap phase is explicitly authorized.
+
+
+---
+
+## 2026-09-24T21:08:00Z — TDL Fact Engine / Game Intel architecture documented
+
+- **Change ID:** Fact Engine / Game Intel V1 supplemental architecture.
+- **Area:** architecture / publication contracts / website product handoff / future predictive research.
+- **Summary:** Added a structured fact system that separates customer-facing publication facts from sport-owned predictive research. Defined cross-repository ownership, fact taxonomy, evidence-first FactRecord fields, quality/predictive states, display ranking, website Game Intel surfaces, archive/live boundaries, market-contamination rules, and a future bounded predictive-research path.
+- **Reason:** The product needs concise verified facts such as team home-performance ranks on game pages, while preserving the option to research whether any fact adds incremental predictive value without double counting existing model features.
+- **Files/components affected:** `docs/FACT_ENGINE_GAME_INTELLIGENCE_V1.md`; `README.md`; `AGENTS.md`; `CODEX_START_HERE.md`; `docs/ARCHITECTURE.md`; `docs/INTEGRATION_CONTRACTS.md`; `docs/ARCHITECTURE_CERTIFICATION_LOG.md`; `docs/CURRENT_RESUME_POINT.md`.
+- **Authority/contract impact:** DLC owns fact admission, product ranking/diversity and publication sealing only. Sport repositories retain fact semantics and all predictive influence authority. Display facts are zero-weight by default. Website/report/TDLA remain downstream renderers. No current model/gate authority changed.
+- **Data/migration impact:** None; documentation only.
+- **Operational impact:** None. No live acquisition, website runtime, publication automation, or probability adjustment is activated.
+- **Validation/evidence:** Reconciled against existing DLC/DDC ownership rules, immutable publication-package architecture, signal-health boundary and post-game no-self-modification rules. Exact DLC resume remains DLC-0 review/freeze.
+- **Risks/open questions:** Exact V1 schemas, sport-specific candidate catalogs, display-score coefficients, website component contract, minimum predictive sample thresholds, and any final influence cap remain subject to DLC-0/DLC-1 and sport-specific review. Proposed 0.50 pp per-signal / 1.00 pp aggregate values are research-only shadow ceilings, not production weights.
+- **Rollback/recovery:** Supersede/version the supplemental architecture if review changes the design; do not erase prior publication evidence.
+- **Next exact step:** Preserve the current DLC-0 architecture/ownership conformance review. During that review, include Fact Engine boundaries/contracts; do not start FE-1 or predictive weighting until explicitly authorized.
