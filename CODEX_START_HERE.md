@@ -12,8 +12,9 @@ Use this file as the mandatory entry point for Codex/agent work in this reposito
 6. `docs/OWNERSHIP_BOUNDARIES.md`
 7. `docs/INTEGRATION_CONTRACTS.md`
 8. `docs/EDGESTACK_PARLAY_OPTIMIZER_V1.md`
-9. `docs/IMPLEMENTATION_ROADMAP.md`
-10. `docs/CHANGE_JOURNAL.md`
+9. `docs/FACT_ENGINE_GAME_INTELLIGENCE_V1.md`
+10. `docs/IMPLEMENTATION_ROADMAP.md`
+11. `docs/CHANGE_JOURNAL.md`
 
 ## Current state
 
@@ -43,3 +44,8 @@ Implementation begins only when the owner explicitly authorizes DLC work and, fo
 ## Bridge constraint
 
 The GrokBot-OpenAI-Bridge currently operates one repository per Codex turn. Never modify another Daily Line repository in the same turn unless the protocol and authorization are explicitly changed. Emit a handoff instead.
+
+
+## Supplemental Game Intel architecture
+
+`docs/FACT_ENGINE_GAME_INTELLIGENCE_V1.md` defines the publication-safe Fact Engine / Game Intel system and a future sport-owned predictive-research lane. It is supplemental architecture only and does **not** change the exact DLC-0 review/freeze continuation or authorize fact-based probability adjustments.
