@@ -22,8 +22,9 @@ Read, in order:
 8. `docs/INTEGRATION_CONTRACTS.md`
 9. `docs/EDGESTACK_PARLAY_OPTIMIZER_V1.md`
 10. `docs/PREGAME_SIGNAL_HEALTH_INTEGRATION_V1.md`
-11. `docs/POST_GAME_FEEDBACK_LOOP_V1.md`
-12. relevant change/validation records.
+11. `docs/FACT_ENGINE_GAME_INTELLIGENCE_V1.md`
+12. `docs/POST_GAME_FEEDBACK_LOOP_V1.md`
+13. relevant change/validation records.
 
 ## 3. Non-negotiable ownership boundaries
 
@@ -40,7 +41,8 @@ Read, in order:
 - Core / Value / Upside classifications;
 - cross-sport product ranking/indexing;
 - immutable `DailyLinePublicationPackage` sealing;
-- product-level provenance and downstream consumer contracts.
+- product-level provenance and downstream consumer contracts;
+- publication-safe fact admission, product ranking/diversity, and sealing for Game Intel surfaces.
 
 ### DLC must not own
 
@@ -52,6 +54,7 @@ Read, in order:
 - individual-market sport decision models;
 - sport Recommendation Gate semantics;
 - sport-specific settlement interpretation;
+- sport-specific predictive fact weighting or fact-to-probability adjustments;
 - website/report/infographic rendering logic;
 - social/video/marketing generation;
 - bankroll/stake management in V1;
