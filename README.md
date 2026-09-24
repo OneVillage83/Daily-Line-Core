@@ -89,10 +89,11 @@ Read in this order:
 4. `docs/OWNERSHIP_BOUNDARIES.md`
 5. `docs/INTEGRATION_CONTRACTS.md`
 6. `docs/EDGESTACK_PARLAY_OPTIMIZER_V1.md`
-7. `docs/IMPLEMENTATION_ROADMAP.md`
-8. `docs/ARCHITECTURE_CERTIFICATION_LOG.md`
-9. `docs/CHANGE_JOURNAL.md`
-10. `docs/CURRENT_RESUME_POINT.md`
+7. `docs/FACT_ENGINE_GAME_INTELLIGENCE_V1.md` — Game Intel / Fact Engine cross-system architecture
+8. `docs/IMPLEMENTATION_ROADMAP.md`
+9. `docs/ARCHITECTURE_CERTIFICATION_LOG.md`
+10. `docs/CHANGE_JOURNAL.md`
+11. `docs/CURRENT_RESUME_POINT.md`
 
 ## Product surfaces
 
@@ -103,6 +104,14 @@ Every supported/modelable market across all admitted sport packages is published
 ### EdgeStack Parlay Optimizer
 
 EdgeStack searches approved 2–5 leg combinations and compares correlation-adjusted model joint probability with real provider combo/parlay pricing. V1 supports Core, Value, and Upside classes plus ranking views for highest hit rate, best value, best balance, and best upside.
+
+### Game Intel / Fact Engine
+
+DLC also owns the cross-sport **product selection/sealing** layer for publication-safe facts emitted by sport repositories. Customer-facing surfaces use the label **Game Intel**.
+
+The Fact Engine is deliberately split from predictive authority: sport repositories decide whether a structured fact is merely display context, a research candidate, or a validated model/gate feature. DLC may rank/select verified facts for presentation but may not give them sport prediction weight.
+
+See `docs/FACT_ENGINE_GAME_INTELLIGENCE_V1.md`.
 
 ## Explicit V1 exclusions
 
