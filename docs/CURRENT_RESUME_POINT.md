@@ -33,6 +33,7 @@ Authority: this file is the single exact continuation point for unfinished DLC w
 15. Bankroll management, stake sizing, stop-loss/chase controls and automated wagering are explicitly deferred from V1.
 16. Sport repositories may publish optional PIT-bound signal-health/regime summaries; DLC may expose/use certified uncertainty metadata but may not recalculate sport state or fair probability.
 17. DLC owns cross-sport/product post-game evaluation and feedback aggregation; single-game outcomes cannot directly mutate sport models or gates.
+18. The **TDL Fact Engine / Game Intel** is split into publication and predictive-research lanes: sports own fact semantics/predictive promotion; DLC owns cross-sport admission, display ranking/diversity and publication sealing; website/TDLA render sealed facts.
 
 ## Exact next step
 
@@ -47,6 +48,7 @@ Resume at:
 - `docs/PREGAME_SIGNAL_HEALTH_INTEGRATION_V1.md` — DLC consumption boundary for sport-owned current-state/regime summaries.
 - `docs/POST_GAME_FEEDBACK_LOOP_V1.md` — immutable outcome audit, miss attribution, PIT counterfactual and research-handoff loop.
 - `docs/POSTGAME_IMPROVEMENT_RECONCILIATION_20260920.md` — anti-duplication mapping for the seven 2026-09-20 NFL/MLB post-game refinements.
+- `docs/FACT_ENGINE_GAME_INTELLIGENCE_V1.md` — Game Intel structured-fact publication architecture plus a future zero-by-default sport-owned predictive research lane.
 
 These do not change the exact next step below or authorize implementation.
 
