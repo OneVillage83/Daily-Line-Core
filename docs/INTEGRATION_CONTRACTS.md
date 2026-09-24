@@ -314,3 +314,64 @@ These V1 contracts contain no authoritative fields for:
 - order-placement authority.
 
 Those require separately versioned future architecture.
+
+
+## Fact Engine / Game Intel contract supplement
+
+The detailed cross-system design is `docs/FACT_ENGINE_GAME_INTELLIGENCE_V1.md`.
+
+### Sport-to-DLC fact handoff
+
+A sport may emit immutable publication-safe structured facts bound to the same-or-earlier point-in-time cutoff as its decision package.
+
+Conceptual fields include:
+
+```text
+FactRecord
+  fact_id
+  schema_version
+  sport / league / event_ref
+  subject_refs[]
+  fact_type
+  metric_key / metric_value
+  rank? / cohort? / denominator?
+  scope / window / sample_size?
+  concise_statement
+  as_of / observed_at? / available_at
+  evidence_refs[] / source_refs[] / evidence_digest
+  quality_state
+  publication_eligibility
+  predictive_status
+  model_feature_refs[]
+  overlap_cluster?
+  supersedes_fact_id?
+```
+
+Only `VERIFIED` publication-eligible facts may enter normal customer-facing V1 output.
+
+### Predictive boundary
+
+`predictive_status` is one of:
+
+- `DISPLAY_ONLY`
+- `RESEARCH_CANDIDATE`
+- `SHADOW_ELIGIBLE`
+- `PROMOTED_FEATURE`
+
+DLC cannot promote a fact between these states. Promotion belongs to the sport repository and requires PIT/OOS incremental evidence.
+
+### Publication package extension
+
+`DailyLinePublicationPackage` may carry:
+
+```text
+game_intel
+  facts[]
+  headline_fact_refs[]
+  event_fact_index
+  product_surface_selections
+
+fact_provenance_manifest
+```
+
+All Bets rows/recommendations may reference `fact_refs[]` as explanatory context. A reference does not imply model influence unless the sport package separately exposes a promoted feature/influence record.
