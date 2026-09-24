@@ -411,3 +411,16 @@ Those are future separately governed capabilities.
 11. Historical packages remain immutable and PIT-correct.
 12. Bankroll/stake logic remains outside V1.
 13. No automated wagering is authorized by this architecture.
+
+
+## Supplemental architecture — TDL Fact Engine / Game Intel
+
+The customer-facing **Game Intel** feature is governed by `docs/FACT_ENGINE_GAME_INTELLIGENCE_V1.md`.
+
+DLC owns only the cross-sport product portion of the feature: admission of sealed publication-safe sport facts, compatibility checks, display relevance/ranking, diversity control, immutable publication-package sealing, and downstream fact provenance.
+
+Sport repositories remain authoritative for sport-native fact derivation, meaning, publication-safe explanation, feature-overlap analysis, and any predictive promotion. A displayed fact has **zero prediction weight by default**. Any future probability/confidence/Recommendation-Gate influence must be promoted through the sport repository's point-in-time out-of-sample research and certification path.
+
+Website/report/infographic/TDLA consumers render sealed facts; they do not recompute ranks or convert interesting facts into model inputs.
+
+Live facts must use a separate live authority and may never rewrite the sealed pregame publication package.
