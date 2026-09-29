@@ -375,3 +375,49 @@ fact_provenance_manifest
 ```
 
 All Bets rows/recommendations may reference `fact_refs[]` as explanatory context. A reference does not imply model influence unless the sport package separately exposes a promoted feature/influence record.
+
+
+## 12. Daily Line Service API read contract
+
+Governing supplemental architecture: `docs/SERVICE_API_MCP_PLUGIN_V1.md`.
+
+The Service API exposes sealed DLC truth to approved clients. It is not an alternate decision engine.
+
+Every analytical response must resolve to an immutable `DailyLinePublicationPackage`, `AllBetsSnapshot`, or other approved sealed resource and preserve enough authority metadata to identify:
+
+- response/API schema version;
+- request/trace identity;
+- publication package and/or snapshot identity;
+- data and market cutoffs;
+- sport package and DDC evidence refs where applicable;
+- policy/config version;
+- quality/degradation and supersession state;
+- resource-specific provenance.
+
+A conceptual API response envelope is:
+
+```text
+DailyLineServiceResponse
+  response_schema_version
+  request_id
+  resolved_at
+  publication_package_id
+  resource_type
+  resource_id
+  data_cutoff
+  market_cutoff
+  quality/degradation_state
+  supersession_state
+  provenance_refs[]
+  payload
+```
+
+Rules:
+
+- `latest` resolution must deterministically return the newest sealed package valid under an explicit scope/cutoff policy and expose the resolved immutable package ID;
+- historical cutoff requests must not observe information that became available later;
+- cached responses retain original timestamps/freshness/provenance and cannot masquerade as newly observed data;
+- authorization/entitlement changes which fields a caller may access, not the underlying probability/recommendation truth;
+- public/private/internal channels may use different capability allowlists over the same canonical product package;
+- the MCP/ChatGPT adapter is a thin Service API client and cannot read mutable model/provider databases as alternate authority;
+- no V1 API or MCP tool has wager/order-placement authority.
