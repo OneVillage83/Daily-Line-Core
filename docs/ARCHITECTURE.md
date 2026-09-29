@@ -135,6 +135,11 @@ Renders approved highlights/EdgeStacks from the sealed package. It must not inve
 #### Website/app
 Owns customer-facing presentation, search, filtering, archive browsing, and result display. It must not become the authoritative decision engine.
 
+#### The Daily Line Service API
+Acts as the presentation-agnostic read/query access layer over sealed DLC product truth. It may expose package lookup, slate/event/market analysis views, archive/search/filtering, entitlement-aware response shaping, and versioned DTOs for approved clients. It must preserve immutable package/snapshot identity, cutoffs, provenance, quality/degradation state, and the separation between independent prediction and market comparison. It may not recalculate sport probabilities, override Recommendation Gates, rerank EdgeStacks, reacquire raw provider evidence, or place wagers.
+
+The MCP/ChatGPT plugin is a thin adapter over this Service API rather than an alternate product-truth path. See `docs/SERVICE_API_MCP_PLUGIN_V1.md`.
+
 #### The-Daily-Line-Automation (TDLA)
 Consumes sealed publication/fact packages for downstream automation such as social/video/content/marketing workflows and other operational automation. TDLA must not own sport modeling, Recommendation Gate semantics, All Bets assembly, or EdgeStack optimization.
 
