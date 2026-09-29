@@ -1,6 +1,6 @@
 # Daily-Line-Core — Current Resume Point
 
-Last updated: 2026-09-24 (America/Los_Angeles)  
+Last updated: 2026-09-29 (America/Los_Angeles)  
 Authority: this file is the single exact continuation point for unfinished DLC work. It does not by itself certify architecture or implementation.
 
 ## Current state
@@ -34,6 +34,7 @@ Authority: this file is the single exact continuation point for unfinished DLC w
 16. Sport repositories may publish optional PIT-bound signal-health/regime summaries; DLC may expose/use certified uncertainty metadata but may not recalculate sport state or fair probability.
 17. DLC owns cross-sport/product post-game evaluation and feedback aggregation; single-game outcomes cannot directly mutate sport models or gates.
 18. The **TDL Fact Engine / Game Intel** is split into publication and predictive-research lanes: sports own fact semantics/predictive promotion; DLC owns cross-sport admission, display ranking/diversity and publication sealing; website/TDLA render sealed facts.
+19. The **Daily Line Service API** is the planned presentation-agnostic read/query layer over sealed DLC truth. Website/mobile/internal clients and MCP/ChatGPT adapters should converge on this interface; it cannot recalculate probability/gate/EdgeStack truth or place wagers.
 
 ## Exact next step
 
@@ -49,6 +50,7 @@ Resume at:
 - `docs/POST_GAME_FEEDBACK_LOOP_V1.md` — immutable outcome audit, miss attribution, PIT counterfactual and research-handoff loop.
 - `docs/POSTGAME_IMPROVEMENT_RECONCILIATION_20260920.md` — anti-duplication mapping for the seven 2026-09-20 NFL/MLB post-game refinements.
 - `docs/FACT_ENGINE_GAME_INTELLIGENCE_V1.md` — Game Intel structured-fact publication architecture plus a future zero-by-default sport-owned predictive research lane.
+- `docs/SERVICE_API_MCP_PLUGIN_V1.md` — future read/query Service API plus thin MCP/ChatGPT plugin adapter; implementation remains gated behind DLC-0/prerequisite contract certification and DLC-10 sequencing.
 
 These do not change the exact next step below or authorize implementation.
 
