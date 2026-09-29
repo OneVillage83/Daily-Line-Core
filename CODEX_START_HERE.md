@@ -13,8 +13,9 @@ Use this file as the mandatory entry point for Codex/agent work in this reposito
 7. `docs/INTEGRATION_CONTRACTS.md`
 8. `docs/EDGESTACK_PARLAY_OPTIMIZER_V1.md`
 9. `docs/FACT_ENGINE_GAME_INTELLIGENCE_V1.md`
-10. `docs/IMPLEMENTATION_ROADMAP.md`
-11. `docs/CHANGE_JOURNAL.md`
+10. `docs/SERVICE_API_MCP_PLUGIN_V1.md`
+11. `docs/IMPLEMENTATION_ROADMAP.md`
+12. `docs/CHANGE_JOURNAL.md`
 
 ## Current state
 
@@ -49,3 +50,8 @@ The GrokBot-OpenAI-Bridge currently operates one repository per Codex turn. Neve
 ## Supplemental Game Intel architecture
 
 `docs/FACT_ENGINE_GAME_INTELLIGENCE_V1.md` defines the publication-safe Fact Engine / Game Intel system and a future sport-owned predictive-research lane. It is supplemental architecture only and does **not** change the exact DLC-0 review/freeze continuation or authorize fact-based probability adjustments.
+
+
+## Supplemental Service API / plugin architecture
+
+`docs/SERVICE_API_MCP_PLUGIN_V1.md` defines the future Daily Line Service API and MCP/ChatGPT plugin boundary. It is documentation-only, remains downstream of sealed DLC product truth, and does **not** authorize API/plugin implementation before DLC-0 and prerequisite contract certification.
