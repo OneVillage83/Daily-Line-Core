@@ -115,6 +115,16 @@ Owns customer-facing presentation, search/filtering, archive browsing, account/p
 
 The website is not the authoritative decision engine. It consumes sealed DLC publication artifacts and records which package/version it displayed.
 
+## The Daily Line Service API / MCP plugin
+
+The Service API is a downstream access/distribution layer over sealed DLC product truth.
+
+It may own stable read/query DTOs, immutable package resolution, filtering/indexing/archive lookup, authentication/authorization hooks, entitlement-aware field access, rate limiting, caching, observability, and client/tool request receipts.
+
+It may not own sport probability, Recommendation Gate semantics, EdgeStack truth, raw DDC acquisition, or wagering execution. An MCP/ChatGPT plugin must call the Service API and must not bypass it to mutable sport/model/provider stores.
+
+Public plugin distribution is a separate policy/security gate from the underlying Service API; channel-specific allowlists may narrow capabilities without forking canonical product truth.
+
 ## The-Daily-Line-Automation (TDLA)
 
 TDLA owns downstream operational/content automation: scheduling, social/video/content workflows, publication coordination and related operational infrastructure under its own architecture.
