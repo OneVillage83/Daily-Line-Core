@@ -2,7 +2,7 @@
 
 Daily-Line-Core (DLC) is **The Daily Line's cross-sport decision aggregation and product-assembly layer**.
 
-It consumes sealed prediction/decision packages from Daily-MLB, Daily-NFL, Daily-NCAAF, and future Daily-* sport engines plus point-in-time market evidence from Daily-Data-Core. DLC assembles the cross-sport **All Bets Prediction Scanner**, runs the **EdgeStack Parlay Optimizer**, builds cross-sport product recommendation views, and seals one immutable `DailyLinePublicationPackage` consumed by the report, infographic, website/app, and downstream automation systems.
+It consumes sealed prediction/decision packages from Daily-MLB, Daily-NFL, Daily-NCAAF, and future Daily-* sport engines plus point-in-time market evidence from Daily-Data-Core. DLC assembles the cross-sport **All Bets Prediction Scanner**, runs the **EdgeStack Parlay Optimizer**, builds cross-sport product recommendation views, and seals one immutable `DailyLinePublicationPackage`. A planned **Daily Line Service API** exposes that sealed truth through stable read/query contracts to the website/app, future mobile clients, internal One Village systems, and an MCP/ChatGPT plugin adapter without duplicating model logic.
 
 > **EdgeStack — Stack the Edge. Not the Odds.**
 
@@ -90,10 +90,11 @@ Read in this order:
 5. `docs/INTEGRATION_CONTRACTS.md`
 6. `docs/EDGESTACK_PARLAY_OPTIMIZER_V1.md`
 7. `docs/FACT_ENGINE_GAME_INTELLIGENCE_V1.md` — Game Intel / Fact Engine cross-system architecture
-8. `docs/IMPLEMENTATION_ROADMAP.md`
-9. `docs/ARCHITECTURE_CERTIFICATION_LOG.md`
-10. `docs/CHANGE_JOURNAL.md`
-11. `docs/CURRENT_RESUME_POINT.md`
+8. `docs/SERVICE_API_MCP_PLUGIN_V1.md` — read/query Service API plus MCP/ChatGPT plugin architecture
+9. `docs/IMPLEMENTATION_ROADMAP.md`
+10. `docs/ARCHITECTURE_CERTIFICATION_LOG.md`
+11. `docs/CHANGE_JOURNAL.md`
+12. `docs/CURRENT_RESUME_POINT.md`
 
 ## Product surfaces
 
@@ -112,6 +113,12 @@ DLC also owns the cross-sport **product selection/sealing** layer for publicatio
 The Fact Engine is deliberately split from predictive authority: sport repositories decide whether a structured fact is merely display context, a research candidate, or a validated model/gate feature. DLC may rank/select verified facts for presentation but may not give them sport prediction weight.
 
 See `docs/FACT_ENGINE_GAME_INTELLIGENCE_V1.md`.
+
+### Daily Line Service API / MCP plugin
+
+The planned Service API is the presentation-agnostic access layer over sealed Daily Line product truth. It will expose versioned, point-in-time-correct read/query surfaces for the website/app, future mobile clients, internal One Village/Dot workflows, and a thin MCP/ChatGPT plugin adapter. The API must preserve publication-package identity, model/market cutoffs, provenance, degradation state, and the separation between independent prediction and market comparison. It may not recalculate sport probabilities, override Recommendation Gates, bypass DDC acquisition, or place wagers.
+
+See `docs/SERVICE_API_MCP_PLUGIN_V1.md`.
 
 ## Explicit V1 exclusions
 
