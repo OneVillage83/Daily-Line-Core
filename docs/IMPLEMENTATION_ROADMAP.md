@@ -138,16 +138,38 @@ Build immutable `DailyLinePublicationPackage` containing:
 
 No renderer may become the authority for a value calculation.
 
-## DLC-10 — Downstream consumer contracts
+## DLC-10 — Downstream consumer and Service API contracts
 
-Repository-specific follow-up turns:
+Repository-specific follow-up turns remain split by owner. The Service API is introduced here only after the canonical publication package is proven.
 
-- report generator consumes sealed package;
-- infographic renderer consumes sealed package;
-- website ingests/displays sealed package;
+### DLC-10A — Daily Line Service API contract
+
+- freeze read/query endpoints or equivalent operations;
+- define stable DTO/response-envelope schemas;
+- preserve immutable package/snapshot IDs, cutoffs, provenance, degradation and supersession;
+- define deterministic `latest` resolution and historical cutoff behavior;
+- define auth/service identity, scopes, entitlements, rate limits, caching and observability;
+- prove the API cannot recalculate sport probabilities, gates or EdgeStack truth;
+- no wager/order-placement surface.
+
+### DLC-10B — Product consumers
+
+- report generator consumes sealed package or approved Service API projection;
+- infographic renderer consumes sealed package or approved Service API projection;
+- website/app consumes the Service API where appropriate while recording exact package identity;
+- future mobile clients consume the same Service API contract;
 - TDLA consumes approved facts for video/social/marketing automation.
 
-Downstream consumers may transform presentation but may not recompute probabilities/gates/EdgeStacks.
+### DLC-10C — MCP / ChatGPT plugin adapter
+
+- implement a thin MCP/plugin adapter over the Service API;
+- expose scoped slate/event/market/matchup/Game Intel/archive tools;
+- preserve timestamps, package IDs, provenance and degradation in tool responses;
+- authenticate existing Daily Line users/entitlements where supported;
+- enforce channel-specific capability allowlists and current platform policy;
+- run security, PIT, provenance, entitlement, cache and tool-behavior acceptance before public submission.
+
+Downstream consumers may transform presentation, index/filter, or expose authorized subsets but may not recompute probabilities/gates/EdgeStacks.
 
 ## DLC-11 — Post-game feedback / PIT evaluation / certification
 
