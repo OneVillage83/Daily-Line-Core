@@ -23,8 +23,9 @@ Read, in order:
 9. `docs/EDGESTACK_PARLAY_OPTIMIZER_V1.md`
 10. `docs/PREGAME_SIGNAL_HEALTH_INTEGRATION_V1.md`
 11. `docs/FACT_ENGINE_GAME_INTELLIGENCE_V1.md`
-12. `docs/POST_GAME_FEEDBACK_LOOP_V1.md`
-13. relevant change/validation records.
+12. `docs/SERVICE_API_MCP_PLUGIN_V1.md`
+13. `docs/POST_GAME_FEEDBACK_LOOP_V1.md`
+14. relevant change/validation records.
 
 ## 3. Non-negotiable ownership boundaries
 
@@ -120,9 +121,9 @@ Late lineups, injury information, market movement, sport reruns, or quote change
 
 ## 9. Downstream consumer rule
 
-Report, infographic, website/app, and The-Daily-Line-Automation consume sealed DLC product truth.
+Report, infographic, website/app, the Daily Line Service API, MCP/plugin adapters, and The-Daily-Line-Automation consume sealed DLC product truth.
 
-They may transform presentation but may not recalculate fair probabilities, alter sport gates, rerank EdgeStacks, or create new recommendation truth unless a future versioned contract explicitly grants that authority.
+They may transform presentation, index/filter, or expose versioned read/query views but may not recalculate fair probabilities, alter sport gates, rerank EdgeStacks, or create new recommendation truth unless a future versioned contract explicitly grants that authority. MCP/plugin adapters must be thin clients over the Service API rather than alternate paths into mutable model/provider state.
 
 ## 10. V1 exclusions
 
