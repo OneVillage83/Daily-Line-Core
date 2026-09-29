@@ -91,3 +91,21 @@ Purpose: durable human-readable memory for material DLC changes.
 - **Risks/open questions:** Exact V1 schemas, sport-specific candidate catalogs, display-score coefficients, website component contract, minimum predictive sample thresholds, and any final influence cap remain subject to DLC-0/DLC-1 and sport-specific review. Proposed 0.50 pp per-signal / 1.00 pp aggregate values are research-only shadow ceilings, not production weights.
 - **Rollback/recovery:** Supersede/version the supplemental architecture if review changes the design; do not erase prior publication evidence.
 - **Next exact step:** Preserve the current DLC-0 architecture/ownership conformance review. During that review, include Fact Engine boundaries/contracts; do not start FE-1 or predictive weighting until explicitly authorized.
+
+
+---
+
+## 2026-09-29T17:19:00Z — Daily Line Service API and MCP/plugin architecture documented
+
+- **Change ID:** Service API / MCP Plugin V1 supplemental architecture.
+- **Area:** architecture / downstream access / API / MCP / ChatGPT distribution.
+- **Summary:** Added a presentation-agnostic Daily Line Service API layer over sealed DLC product truth and defined the future MCP/ChatGPT plugin as a thin adapter over that API. Documented authority boundaries, canonical response metadata, PIT/latest semantics, authentication/entitlements, caching, observability, error behavior, channel capability allowlists, implementation sequencing, and acceptance gates.
+- **Reason:** The Daily Line should expose its own canonical model/product output directly to approved clients so ChatGPT, Dots, website/mobile clients, and internal tooling do not reconstruct Daily Line analysis through web search or duplicate business logic.
+- **Files/components affected:** `docs/SERVICE_API_MCP_PLUGIN_V1.md`; `README.md`; `AGENTS.md`; `CODEX_START_HERE.md`; `docs/README.md`; `docs/ARCHITECTURE.md`; `docs/OWNERSHIP_BOUNDARIES.md`; `docs/INTEGRATION_CONTRACTS.md`; `docs/IMPLEMENTATION_ROADMAP.md`; `docs/ARCHITECTURE_CERTIFICATION_LOG.md`; `docs/CURRENT_RESUME_POINT.md`.
+- **Authority/contract impact:** No production authority granted. The Service API is explicitly downstream of sealed `DailyLinePublicationPackage` / approved DLC resources and may expose/query/index them without becoming probability, Recommendation Gate, EdgeStack, DDC acquisition, or wagering authority. Public MCP/plugin capabilities remain subject to separate channel policy/security review.
+- **Data/migration impact:** None; documentation only.
+- **Operational impact:** None. No API endpoint, MCP server, plugin submission, authentication system, live provider access, or wagering action was enabled.
+- **Validation/evidence:** Reconciled with existing DLC ownership, sealed-input/publication immutability rules, downstream consumer boundary, PIT requirements, Fact Engine architecture, and current DLC-0 review-pending status. Roadmap implementation placed under DLC-10A (Service API) and DLC-10C (MCP/plugin) after prerequisite contracts/product sealing.
+- **Risks/open questions:** Exact runtime/repository placement, REST vs complementary query transports, DTO schemas, OAuth/service identity provider, entitlement model, caching/storage implementation, archive/search index, plugin marketplace policy at submission time, and final public capability allowlist remain review items.
+- **Rollback/recovery:** Documentation-only supplemental architecture; supersede/version this document if DLC-0 review changes the design. Do not implement around the contract before certification.
+- **Next exact step:** Preserve the current DLC-0 architecture/ownership conformance review and include Service API/MCP boundaries in that review. Do not start Service API/plugin implementation yet.
